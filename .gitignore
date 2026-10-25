@@ -16,3 +16,6 @@ __pycache__/
 .idea/
 Thumbs.db
 desktop.ini
+
+# 本地发布打包
+_release/

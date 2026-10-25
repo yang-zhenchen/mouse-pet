@@ -108,16 +108,16 @@ pythonw mouse_pet.py
 - **Python 3.9 或更高**，安装时勾选 “Add python.exe to PATH”。tkinter 随 Python 自带，**不需要 pip 安装任何依赖**。
 - 把整个 `mouse-pet` 文件夹拷过去，**先删掉 `data/` 目录**：里面是这台机器的窗口位置、透明度、统计记录和计划任务 XML，不该跟着走。
 
-启动脚本会自动找 Python：本机 pythonw → `pyw.exe` 启动器 → PATH 里的 `pythonw.exe`，找不到会弹提示。
+启动脚本会自动找 Python：PATH 里的 `pyw.exe` → `pythonw.exe` → 常见安装目录（`%LOCALAPPDATA%\Programs\Python`、`%LOCALAPPDATA%\Python` 等），找不到会弹提示。可以用 `cscript //nologo 启动鼠标桌宠.vbs /find-python` 看它实际选了哪个。
 
 会自动适应的：屏幕分辨率和 150% / 200% 缩放（窗口与字体按 DPI 缩放）、多显示器（位置越界会拉回可见区域）、不同的 `%APPDATA%` 路径（数据目录不可写时自动回退）。
 
 不行的：
 
-- 目标电脑没装 Python：得先装，或者用 PyInstaller 打包成 exe（本版本没有内置打包）。
+- 目标电脑没装 Python：得先装，或者用目录里的 `build_exe.bat` 打包成 exe 再发。
 - 想统计管理员窗口里的操作：目标机也要让桌宠以管理员运行（UIPI，见上面的说明）。
 
-`assets/` 里的大肥鱼贴图来自社区项目的署名许可素材（见下方「素材说明」），可以随项目一起分发，保留 `THIRD_PARTY_NOTICES.md` 即可。
+`assets/` 里的角色素材按各自的署名/非商业许可分发，保留 `THIRD_PARTY_NOTICES.md` 即可。
 
 ## 打包成 exe（可选）
 
@@ -252,6 +252,11 @@ mouse-pet/
 ├─ demo_expressions.png
 └─ data/                运行后自动生成
 ```
+
+## 许可
+
+- **代码**（`mouse_pet.py`、VBS、bat、文档）：[MIT](LICENSE)。
+- **角色素材**（`assets/` 和演示图）：不属于 MIT，按各自许可使用，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)；其中 ChatGPT / Claude Q 版要求署名且**禁止商用**。
 
 ## 素材说明
 

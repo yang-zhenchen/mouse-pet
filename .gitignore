@@ -1,0 +1,18 @@
+# 运行时数据（个人统计、配置、日志、任务 XML）
+data/
+
+# 构建产物
+build/
+dist/
+*.spec
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 编辑器/系统
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

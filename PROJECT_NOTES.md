@@ -8,7 +8,7 @@ Windows 桌面宠物：统计鼠标移动距离、左右键、滚轮和键盘，
 
 ## 位置与仓库
 
-- 本地：`D:\dshwork\桌宠\mouse-pet`
+- 本地：`D:\dshwork\mouse-pet`（DSH 工作区标题为「桌宠」）
 - GitHub：https://github.com/yang-zhenchen/mouse-pet
 - Release：`v2.1`（`MousePet-v2.1-win64.zip`）
 - 网络：本机代理 `127.0.0.1:7890`；仓库里已设 `git config http.proxy`
